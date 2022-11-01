@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is Birthaday Palindrome?</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Is your birthday a palindrome?</h1>
+
+      <input type="date" name="dob" id="dob" /><br />
+      <button class="submit">Let's find out</button>
+      <div class="result"></div>
+      <button id="NextDate">Find Next Palindrome Date</button>
+      <button id="PrevDate">Find Previous Palindrome Date</button>
+      <div class="alert">
+        <span
+          class="closebtn"
+          onclick="this.parentElement.style.display='none';"
+          >&times;</span
+        >
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
