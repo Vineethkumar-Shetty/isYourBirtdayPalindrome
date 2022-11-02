@@ -171,8 +171,9 @@ function checkPreviousPalindrome(date) {
   }
 }
 
-function print(msg) {
+function print(msg,color) {
   result.innerText = msg;
+  result.style.color = color;
 }
 function PrintPrev([NumberofPreviousDays, PastDate]) {
   print(
@@ -183,7 +184,7 @@ function PrintPrev([NumberofPreviousDays, PastDate]) {
       "/" +
       PastDate.month +
       "/" +
-      PastDate.year
+      PastDate.year,"red"
   );
 }
 function PrintNext([NumberofNextDays, nextPday]) {
@@ -195,7 +196,7 @@ function PrintNext([NumberofNextDays, nextPday]) {
       "/" +
       nextPday.month +
       "/" +
-      nextPday.year
+      nextPday.year,"red"
   );
 }
 
@@ -226,7 +227,7 @@ submit.addEventListener("click", function () {
       }
     }
     if (isItPalindrome) {
-      print("OMG! You are a Palindromic Baby. Congratulations");
+      print("Super!! Your birthday is palindrome","green");
     } else {
       const [NumberofNextDays, nextPday] = checkNextPalindrome(date);
       const [NumberofPreviousDays, PastDate] = checkPreviousPalindrome(date);
